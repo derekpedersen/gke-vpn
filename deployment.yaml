@@ -42,6 +42,13 @@ spec:
           capabilities:
             add:
             - NET_ADMIN
+        resources:
+          limits:
+            cpu: "50m"
+            memory: "100Mi"
+          requests:
+            cpu: "10m"
+            memory: "25Mi"
         volumeMounts:
         - name: ovpn0-key
           mountPath: /etc/openvpn/pki/private
